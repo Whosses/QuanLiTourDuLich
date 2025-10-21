@@ -20,7 +20,7 @@ git clone https://github.com/Whosses/QuanLiTourDuLich.git
 👥 2. Phân chia nhiệm vụ & nhánh
 | Người               | Nhiệm vụ chính                                             | Tên nhánh làm việc |
 | ------------------- | ---------------------------------------------------------- | ------------------ |
-| 🧩 Người 1 (Leader) | Xây dựng **Model** (Tour, Hướng dẫn viên, Khách hàng, ...) | `feature/model`    |
+| 🧩 Người 1          | Xây dựng **Model** (Tour, Hướng dẫn viên, Khách hàng, ...) | `feature/model`    |
 | ⚙️ Người 2          | Viết **Service** (TourService, KhachHangService, ...)      | `feature/service`  |
 | 🧮 Người 3          | Viết **Menu** + **Main** để chạy chương trình              | `feature/menu`     |
 
