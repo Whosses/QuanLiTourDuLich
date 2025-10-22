@@ -2,6 +2,7 @@ package OOP.Nhom15.QuanLiTourDuLich.model;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Tour {
     //Bắt đầu khởi tạo biến nè
@@ -45,5 +46,5 @@ public class Tour {
         this.ngayBatDau = other.ngayBatDau;
         this.ngayKetThuc = other.ngayKetThuc;
     }
-
+ 
 }

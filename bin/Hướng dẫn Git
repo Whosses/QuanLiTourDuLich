@@ -1,0 +1,119 @@
+# 🧭 HƯỚNG DẪN LÀM VIỆC NHÓM QUA GITHUB  
+### Dự án: **Quản lí tour du lịch (OOP – Java)**  
+*(Dành cho nhóm 3 người – dùng IntelliJ và GitHub)*
+
+---
+
+## ⚙️ 1. Chuẩn bị ban đầu
+
+### Cần cài:
+- **IntelliJ IDEA** (Community là đủ)
+- **Git** → kiểm tra bằng lệnh:  
+  ```bash
+  git --version
+JDK 21 hoặc 24 (chung version với dự án)
+
+Clone project:
+git clone https://github.com/Whosses/QuanLiTourDuLich.git
+→ Sau khi clone, mở thư mục bằng IntelliJ hoặc VSCode
+
+👥 2. Phân chia nhiệm vụ & nhánh
+| Người               | Nhiệm vụ chính                                             | Tên nhánh làm việc |
+| ------------------- | ---------------------------------------------------------- | ------------------ |
+| 🧩 Người 1          | Xây dựng **Model** (Tour, Hướng dẫn viên, Khách hàng, ...) | `feature/model`    |
+| ⚙️ Người 2          | Viết **Service** (TourService, KhachHangService, ...)      | `feature/service`  |
+| 🧮 Người 3          | Viết **Menu** + **Main** để chạy chương trình              | `feature/menu`     |
+
+🌳 3. Quy trình làm việc
+① Cập nhật code mới nhất
+Trước khi làm bất kỳ thứ gì:
+  git checkout main
+  git pull origin main
+
+② Tạo nhánh riêng của bạn
+  git checkout -b feature/<tên-nhánh>
+Ví dụ:
+  git checkout -b feature/service
+
+③ Code & Commit
+Sau khi code xong một phần:
+  git add .
+  git commit -m "feat: thêm lớp TourService xử lý thêm/xóa/sửa tour"
+
+④ Đưa code lên GitHub
+  git push -u origin feature/<tên-nhánh>
+
+🧾 4. Tạo Pull Request (PR) để merge vào main
+1.Lên GitHub → tab Pull requests → chọn New pull request
+2.Base: main, Compare: feature/tên-nhánh
+3.Ghi tiêu đề ví dụ:
+  feat(service): thêm chức năng quản lý tour
+4.Mô tả ngắn về thay đổi bạn làm
+5.Nhấn Create pull request
+6.Gắn tag người khác trong nhóm để review
+
+🕵️ 5. Review & Merge
+Thành viên khác vào xem code → comment nếu cần chỉnh.
+Khi đồng ý, họ nhấn “Approve” → Merge PR.
+Sau khi merge xong → nhấn Delete branch (GitHub hỏi bạn tự động).
+
+🔁 6. Cập nhật code mới nhất sau merge
+Mỗi người nên làm sau mỗi merge:
+  git checkout main
+  git pull origin main
+Giúp code của bạn luôn đồng bộ với nhóm.
+
+⚔️ 7. Nếu có xung đột (conflict)
+Khi Git báo conflict, mở file trong IntelliJ và tìm:
+  <<<<<<< HEAD
+  (code của bạn)
+  =======
+  (code của người khác)
+  >>>>>>> main
+Giữ phần đúng, xóa các dấu <<<<<<<, =======, >>>>>>>
+Rồi gõ:
+  git add .
+  git commit -m "fix: resolve conflict"
+  git push
+
+✅ 8. Quy tắc nhóm
+1.❌ Không push trực tiếp vào main
+(GitHub đã chặn để tránh ghi đè code)
+2.Mọi thay đổi phải qua Pull Request
+3.✍️ Commit rõ ràng:
+  feat: thêm mới
+  fix: sửa lỗi
+  refactor: chỉnh code không đổi logic
+4.🔄 Luôn git pull origin main trước khi code
+5.🌱 Mỗi nhiệm vụ = 1 nhánh riêng
+
+🧩 9. Ví dụ minh họa
+Ví dụ người viết TourService:
+  git checkout main
+  git pull origin main
+  git checkout -b feature/service
+
+  # code ...
+
+  git add .
+  git commit -m "feat: thêm các hàm thêm/sửa/xóa tour"
+  git push -u origin feature/service
+Sau đó → Lên GitHub → Tạo Pull Request → Chờ review → Merge.
+
+📘 10. Tóm tắt nhanh
+| Hành động              | Lệnh Git                           |
+| ---------------------- | ---------------------------------- |
+| Cập nhật code mới nhất | `git pull origin main`             |
+| Tạo nhánh mới          | `git checkout -b feature/...`      |
+| Commit code            | `git add . && git commit -m "..."` |
+| Push code              | `git push -u origin feature/...`   |
+| Merge code             | Tạo Pull Request trên GitHub       |
+| Cập nhật sau merge     | `git pull origin main`             |
+
+🌟 Ghi nhớ:
+“Luôn làm việc trên branch riêng, chỉ merge vào main qua Pull Request.”
+
+
+
+
+
